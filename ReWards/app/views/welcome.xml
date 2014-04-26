@@ -1,0 +1,5 @@
+<Alloy>
+    <Window class="container">
+        <Button id="btnFacebook" class="teedotButton">Sign in with Facebook</Button>
+    </Window>
+</Alloy>
