@@ -1,0 +1,5 @@
+<Alloy>
+    <Window class="container">
+        <Label>Welcome</Label>
+    </Window>
+</Alloy>

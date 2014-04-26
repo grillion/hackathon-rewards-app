@@ -12,7 +12,7 @@
 
 //Facebook Setup
 var fb = require('facebook');
-console.debug("App init - Setting facebook app ip: " + Alloy.CFG.facebook.appid );
-fb.appid = Alloy.CFG.facebook.appid;
-fb.forceDialogAuth = Alloy.CFG.facebook.forceDialogAuth;
-Alloy.Globals.Facebook = fb;
+//console.debug("App init - Setting facebook app ip: " + Alloy.CFG.facebook.appid );
+//fb.appid = Alloy.CFG.facebook.appid;
+//fb.forceDialogAuth = Alloy.CFG.facebook.forceDialogAuth;
+//Alloy.Globals.Facebook = fb;
