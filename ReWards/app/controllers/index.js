@@ -18,6 +18,7 @@ function init(){
     
     if( Ti.App.Properties.getInt( "userId", 0 ) != 0
         || fb.loggedIn ) {
+        	
        var userHomeWindow = Alloy.createController('userhome').getView();
        Alloy.Globals.navWindow.openWindow( userHomeWindow );    	
     }

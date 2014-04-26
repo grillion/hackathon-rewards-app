@@ -17,3 +17,7 @@ console.debug("App init - Setting facebook app ip: " + appId );
 fb.appid = appId;
 fb.forceDialogAuth = true;
 Alloy.Globals.Facebook = fb;
+
+
+var apiClient = require("rewards-sdk/Client");
+Alloy.Globals.apiClient = new apiClient();

@@ -1,5 +1,11 @@
 <Alloy>
-    <Window class="container">
+    <Window class="container" title="Home">
+    	<LeftNavButton>
+    		 <Label></Label>
+	    </LeftNavButton>
+	    
         <Label>Welcome back</Label>
+        <ImageView id="userBarcode" />
+        <Button id="btnLogout">Log Out</Button>
     </Window>
 </Alloy>
