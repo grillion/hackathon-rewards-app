@@ -1,3 +1,5 @@
+var fb = Alloy.Globals.Facebook;
+
 function openUserHomeWindow(){
     var userHomeWindow = Alloy.createController('userhome').getView();
     Alloy.Globals.navWindow.openWindow( userHomeWindow, {
@@ -6,7 +8,16 @@ function openUserHomeWindow(){
 }
 
 function beginFacebookLogin(){
-    
+	fb.addEventListener('login', function(e) {
+	    if (e.success) {
+	        alert('Logged In');
+	    } else if (e.error) {
+	        alert(e.error);
+	    } else if (e.cancelled) {
+	        alert("Canceled");
+	    }
+	});
+    fb.authorize();
 }
 
 function _btnFacebookClick(e) {

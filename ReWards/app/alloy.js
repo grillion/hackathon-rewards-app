@@ -11,8 +11,9 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 
 //Facebook Setup
+var appId = Ti.App.Properties.getString("ti.facebook.appid");
 var fb = require('facebook');
-//console.debug("App init - Setting facebook app ip: " + Alloy.CFG.facebook.appid );
-//fb.appid = Alloy.CFG.facebook.appid;
-//fb.forceDialogAuth = Alloy.CFG.facebook.forceDialogAuth;
-//Alloy.Globals.Facebook = fb;
+console.debug("App init - Setting facebook app ip: " + appId );
+fb.appid = appId;
+fb.forceDialogAuth = true;
+Alloy.Globals.Facebook = fb;

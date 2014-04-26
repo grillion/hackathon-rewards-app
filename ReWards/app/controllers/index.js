@@ -1,5 +1,3 @@
-var td = Alloy.Globals.Teedot;
-
 function init(){
     
     var welcomeWindow = Alloy.createController('welcome').getView();
@@ -18,11 +16,11 @@ function init(){
     Alloy.Globals.navWindow.setOpacity(0);
     Alloy.Globals.navWindow.open();
     
-    //if( session.isLoggedIn() ){ 
-    //    var userHomeWindow = Alloy.createController('userhome').getView();
-    //    Alloy.Globals.navWindow.openWindow( userHomeWindow );
-    //}
-    
+    if( Ti.App.Properties.getInt( "userId", 0 ) != 0 ) {
+       var userHomeWindow = Alloy.createController('userhome').getView();
+       Alloy.Globals.navWindow.openWindow( userHomeWindow );    	
+    }
+        
     Alloy.Globals.navWindow.animate({
         opacity: 1,
         duration: 1000
