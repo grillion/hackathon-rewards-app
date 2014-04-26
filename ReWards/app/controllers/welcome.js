@@ -10,7 +10,8 @@ function openUserHomeWindow(){
 function beginFacebookLogin(){
 	fb.addEventListener('login', function(e) {
 	    if (e.success) {
-	        alert('Logged In');
+	        var userHomeWindow = Alloy.createController('userhome').getView();
+			Alloy.Globals.navWindow.openWindow( userHomeWindow );
 	    } else if (e.error) {
 	        alert(e.error);
 	    } else if (e.cancelled) {

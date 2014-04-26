@@ -16,11 +16,12 @@ function init(){
     Alloy.Globals.navWindow.setOpacity(0);
     Alloy.Globals.navWindow.open();
     
-    if( Ti.App.Properties.getInt( "userId", 0 ) != 0 ) {
+    if( Ti.App.Properties.getInt( "userId", 0 ) != 0
+        || fb.loggedIn ) {
        var userHomeWindow = Alloy.createController('userhome').getView();
        Alloy.Globals.navWindow.openWindow( userHomeWindow );    	
     }
-        
+
     Alloy.Globals.navWindow.animate({
         opacity: 1,
         duration: 1000
